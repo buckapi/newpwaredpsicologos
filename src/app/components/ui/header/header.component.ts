@@ -10,10 +10,20 @@ import { CommonModule } from '@angular/common';
   styleUrl: './header.component.css'
 })
 export class HeaderComponent {
-constructor (
-  public global: GlobalService,
-  public auth: AuthPocketbaseService
-) {}
+  isMobileMenuOpen: boolean = false;
+  constructor (
+    public global: GlobalService,
+    public auth: AuthPocketbaseService
+  ) {}
+
+  toggleMobileMenu() {
+    this.isMobileMenuOpen = !this.isMobileMenuOpen;
+  }
+
+  closeMobileMenu() {
+    this.isMobileMenuOpen = false;
+  }
+  
 logoutUser() {
   Swal.fire({
     title: '¿Quieres cerrar sesión?',

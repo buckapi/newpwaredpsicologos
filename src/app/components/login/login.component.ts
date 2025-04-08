@@ -14,7 +14,7 @@ import { CommonModule } from '@angular/common';
 export class LoginComponent {
   loading: boolean = false;
   loginForm: FormGroup;
-  passwordVisible: boolean = false; // Variable para mostrar/ocultar la contraseña
+  passwordVisible: boolean = false; 
   errorMessage: string | null = null;
   showPassword: boolean = false;
   constructor(

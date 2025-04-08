@@ -27,16 +27,18 @@
                                     </div>
                                 </div>
                                 <div class="mb-3">
-                                    <div class="form-group-flex">
+                                    
                                         <label class="form-label">Contraseña</label>
+                                    <div class="pass-group">
                                         <input name="password" placeholder="Ingrese su contraseña" 
                                         class="form-control py-11 ps-40" id="password"
                                         formControlName="password" 
-                                        [type]="passwordVisible ? 'text' : 'password'">
+                                        [type]="showPassword ? 'text' : 'password'">
                                         <span class="toggle-password" (click)="togglePasswordVisibility()">
-                                            <i [class]="passwordVisible ? 'feather-eye' : 'feather-eye-off'"></i>
+                                            <i [class]="showPassword ? 'feather-eye' : 'feather-eye-off'"></i>
                                         </span>
-                                    </div> 
+                                    </div>                                       
+                                    
                                     <div *ngIf="password?.invalid && (password?.touched || password?.dirty)" class="text-danger">
                                         <small *ngIf="password?.hasError('required')">La contraseña es obligatoria.</small>
                                         <small *ngIf="password?.hasError('minlength')">La contraseña debe tener al menos 6 caracteres.</small>

@@ -1,42 +1,10 @@
-			
- <!--  <div class="header-topbar">
-    <div class="container">
-      <div class="topbar-info">
-        <div class="d-flex align-items-center gap-3 header-info">
-          <p><a href="mailto:contacto@redpsicologos.cl"><i class="isax isax-message-text5 me-1"></i>contacto&#64;redpsicologos.cl</a></p>
-        </div>
-        <ul>
-          <li class="header-theme">
-            <a href="javascript:void(0);" id="dark-mode-toggle" class="theme-toggle activate">
-              <i class="isax isax-sun-1"></i>
-            </a>
-            <a href="javascript:void(0);" id="light-mode-toggle" class="theme-toggle">
-              <i class="isax isax-moon"></i>
-            </a>
-          </li>
-          <li class="d-inline-flex align-items-center drop-header">
-            <div class="dropdown dropdown-country me-3">
-              <a href="javascript:void(0);" class="d-inline-flex align-items-center" data-bs-toggle="dropdown" aria-expanded="false">
-                <img src="assets/img/flags/us-flag.svg" class="me-2" alt="flag">
-              </a>
-            </div>
-          </li>
-          <li class="social-header">
-            <div class="social-icon">
-              <a href="https://www.instagram.com/redpsicologos_cl/?igsh=dDJoMGM4MGVvNWk0&utm_source=qr" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div> -->
-  
-  <!-- Header -->
+
+
   <header class="header header-custom header-fixed inner-header relative">
     <div class="container">
       <nav class="navbar navbar-expand-lg header-nav">
         <div class="navbar-header">
-          <a id="mobile_btn" href="javascript:void(0);">
+          <a id="mobile_btn"  (click)="toggleMobileMenu()">
             <span class="bar-icon">
               <span></span>
               <span></span>
@@ -47,31 +15,32 @@
             <img src="assets/img/logo-3.png" class="img-fluid" alt="Logo">
           </a>
         </div>
-        <div class="header-menu">
+        <div class="header-menu" [class.show-menu]="isMobileMenuOpen">
+          <div class="mobile-menu-overlay" [class.show]="isMobileMenuOpen" (click)="closeMobileMenu()"></div>
           <div class="main-menu-wrapper">
             <div class="menu-header">
               <a (click)="global.setRoute('home')" class="menu-logo">
                 <img src="assets/img/logo-3.png" class="img-fluid" alt="Logo">
               </a>
-              <a id="menu_close" class="menu-close" href="javascript:void(0);">
+              <a id="menu_close" class="menu-close"  (click)="closeMobileMenu()">
                 <i class="fas fa-times"></i>
               </a>
             </div>
             <ul class="main-nav">
               <li class="has-submenu megamenu active" *ngIf="!auth.isLogin()">
-                <a (click)="global.setRoute('home')">Inicio </a>
+                <a (click)="global.setRoute('home'); closeMobileMenu()">Inicio </a>
               </li>
               <li class="has-submenu" *ngIf="!auth.isLogin()">
-                <a (click)="global.setRoute('professionals')" >Especialistas <i class="fas fa-user-md"></i></a>
+                <a (click)="global.setRoute('professionals'); closeMobileMenu()" >Especialistas <i class="fas fa-user-md"></i></a>
               </li>
               <li class="has-submenu megamenu active" *ngIf="!auth.isLogin()">
-                <a (click)="global.setRoute('contact')">Contacto </a>
+                <a (click)="global.setRoute('contact'); closeMobileMenu()">Contacto </a>
               </li>
             </ul>
           </div>
           <ul class="nav header-navbar-rht">
             <li class="searchbar" *ngIf="!auth.isLogin()">
-              <a href="javascript:void(0);"><i class="feather-search"></i></a>
+              <a><i class="feather-search"></i></a>
               <div class="togglesearch">
                 <form >
                   <div class="input-group">
@@ -82,10 +51,10 @@
               </div>
             </li>
             <li *ngIf="!auth.isLogin()">
-              <a (click)="global.setRoute('login')"  [hidden]="global.activeRoute === 'login'" class="btn btn-md btn-primary-gradient d-inline-flex align-items-center rounded-pill"><i class="isax isax-lock-1 me-1"></i>Ingresa</a>
+              <a (click)="global.setRoute('login'); closeMobileMenu()"  [hidden]="global.activeRoute === 'login'" class="btn btn-md btn-primary-gradient d-inline-flex align-items-center rounded-pill"><i class="isax isax-lock-1 me-1"></i>Ingresa</a>
             </li>
             <li *ngIf="!auth.isLogin()">
-              <a (click)="global.setRoute('register')" [hidden]="global.activeRoute === 'register'" class="btn btn-md btn-dark d-inline-flex align-items-center rounded-pill">
+              <a (click)="global.setRoute('register'); closeMobileMenu()" [hidden]="global.activeRoute === 'register'" class="btn btn-md btn-dark d-inline-flex align-items-center rounded-pill">
                 <i class="isax isax-user-tick me-1"></i>Registrate
               </a>
             </li>
