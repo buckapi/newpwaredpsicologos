@@ -71,7 +71,7 @@
                             <div class="accordion-header" id="heading1">
                                 <div class="accordion-button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-controls="collapse1" role="button">
                                     <div class="d-flex align-items-center w-100">
-                                        <h5>Specialities</h5>
+                                        <h5>Especialidades</h5>
                                         <div class="ms-auto">
                                             <span><i class="fas fa-chevron-down"></i></span>
                                         </div>
@@ -80,320 +80,14 @@
                             </div>
                             <div id="collapse1" class="accordion-collapse show" aria-labelledby="heading1">
                                 <div class="accordion-body pt-3">
-                                    <div class="d-flex align-items-center justify-content-between mb-2">
+                                    <div class="d-flex align-items-center justify-content-between mb-2" *ngFor="let corriente of corrientes.corrientes$ | async">
                                         <div class="form-check">
                                             <input class="form-check-input" type="checkbox" value="" id="checkebox-sm2" checked="">
                                             <label class="form-check-label" for="checkebox-sm2">
-                                                Urology
+                                                {{corriente.name}}
                                             </label>
                                         </div>
-                                        <span class="filter-badge">21</span>
-                                    </div>
-                                    <div class="d-flex align-items-center justify-content-between mb-2">
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" value="" id="checkebox-sm3">
-                                            <label class="form-check-label" for="checkebox-sm3">
-                                                Psychiatry
-                                            </label>
-                                        </div>
-                                        <span class="filter-badge">21</span>
-                                    </div>
-                                    <div class="d-flex align-items-center justify-content-between mb-2">
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" value="" id="checkebox-sm4">
-                                            <label class="form-check-label" for="checkebox-sm4">
-                                                Cardiology
-                                            </label>
-                                        </div>
-                                        <span class="filter-badge">21</span>
-                                    </div>
-                                    <div class="d-flex align-items-center justify-content-between mb-2">
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" value="" id="checkebox-sm5">
-                                            <label class="form-check-label" for="checkebox-sm5">
-                                                Pediatrics
-                                            </label>
-                                        </div>
-                                        <span class="filter-badge">21</span>
-                                    </div>
-                                    <div class="d-flex align-items-center justify-content-between mb-2">
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" value="" id="checkebox-sm6">
-                                            <label class="form-check-label" for="checkebox-sm6">
-                                                Urology
-                                            </label>
-                                        </div>
-                                        <span class="filter-badge">21</span>
-                                    </div>
-                                    <div class="d-flex align-items-center justify-content-between mb-2">
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" value="" id="checkebox-sm7">
-                                            <label class="form-check-label" for="checkebox-sm7">
-                                                Neurology
-                                            </label>
-                                        </div>
-                                        <span class="filter-badge">21</span>
-                                    </div>
-                                    <div class="d-flex align-items-center justify-content-between mb-2">
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" value="" id="checkebox-sm8">
-                                            <label class="form-check-label" for="checkebox-sm8">
-                                                Pulmonology
-                                            </label>
-                                        </div>
-                                        <span class="filter-badge">21</span>
-                                    </div>
-                                    <div class="view-content">
-                                        <div class="viewall-one">
-                                            <div class="d-flex align-items-center justify-content-between mb-2">
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" value="" id="checkebox-sm9">
-                                                    <label class="form-check-label" for="checkebox-sm9">
-                                                        Orthopedics
-                                                    </label>
-                                                </div>
-                                                <span class="filter-badge">21</span>
-                                            </div>
-                                            <div class="d-flex align-items-center justify-content-between mb-2">
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" value="" id="checkebox-sm10">
-                                                    <label class="form-check-label" for="checkebox-sm10">
-                                                        Endocrinology
-                                                    </label>
-                                                </div>
-                                                <span class="filter-badge">21</span>
-                                            </div>
-                                        </div>
-                                        <div class="view-all">
-                                            <a href="javascript:void(0);" class="viewall-button-one text-secondary text-decoration-underline">View More</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item border-bottom">
-                            <div class="accordion-header" id="heading2">
-                                <div class="accordion-button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-controls="collapse2" role="button">
-                                    <div class="d-flex align-items-center w-100">
-                                        <h5>Gender</h5>
-                                        <div class="ms-auto">
-                                            <span><i class="fas fa-chevron-down"></i></span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div id="collapse2" class="accordion-collapse show" aria-labelledby="heading2">
-                                <div class="accordion-body pt-3">
-                                    <div class="d-flex align-items-center justify-content-between mb-2">
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" value="" id="checkebox-sm11" checked="">
-                                            <label class="form-check-label" for="checkebox-sm11">
-                                                Male
-                                            </label>
-                                        </div>
-                                        <span class="filter-badge">21</span>
-                                    </div>
-                                    <div class="d-flex align-items-center justify-content-between">
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" value="" id="checkebox-sm12">
-                                            <label class="form-check-label" for="checkebox-sm12">
-                                                Female
-                                            </label>
-                                        </div>
-                                        <span class="filter-badge">21</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item border-bottom">
-                            <div class="accordion-header" id="heading3">
-                                <div class="accordion-button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-controls="collapse3" role="button">
-                                    <div class="d-flex align-items-center w-100">
-                                        <h5>Availability</h5>
-                                        <div class="ms-auto">
-                                            <span><i class="fas fa-chevron-down"></i></span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div id="collapse3" class="accordion-collapse show" aria-labelledby="heading3">
-                                <div class="accordion-body pt-3">
-                                    <div class="d-flex align-items-center justify-content-between mb-2">
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" value="" id="checkebox-sm13" checked="">
-                                            <label class="form-check-label" for="checkebox-sm13">
-                                                Available Today
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="d-flex align-items-center justify-content-between mb-2">
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" value="" id="checkebox-sm14">
-                                            <label class="form-check-label" for="checkebox-sm14">
-                                                Available Tomorrow
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="view-content">
-                                        <div class="viewall-two">
-                                            <div class="d-flex align-items-center justify-content-between mb-2">
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" value="" id="checkebox-sm15">
-                                                    <label class="form-check-label" for="checkebox-sm15">
-                                                        Available in Next 7 Days
-                                                    </label>
-                                                </div>
-                                            </div>
-                                            <div class="d-flex align-items-center justify-content-between mb-2">
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" value="" id="checkebox-sm16">
-                                                    <label class="form-check-label" for="checkebox-sm16">
-                                                        Available in Next 30 Days
-                                                    </label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="view-all">
-                                            <a href="javascript:void(0);" class="viewall-button-two text-secondary text-decoration-underline">View More</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item border-bottom">
-                            <div class="accordion-header" id="heading4">
-                                <div class="accordion-button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-controls="collapse4" role="button">
-                                    <div class="d-flex align-items-center w-100">
-                                        <h5>Pricing</h5>
-                                        <div class="ms-auto">
-                                            <span><i class="fas fa-chevron-down"></i></span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div id="collapse4" class="accordion-collapse show" aria-labelledby="heading4">
-                                <div class="accordion-body pt-3">
-                                    <div class="filter-range">
-                                        <input type="text" id="range_03">
-                                    </div>
-                                    <p class="mb-0">Range : $200 - $5695</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item border-bottom">
-                            <div class="accordion-header" id="heading5">
-                                <div class="accordion-button" data-bs-toggle="collapse" data-bs-target="#collapse5" aria-controls="collapse5" role="button">
-                                    <div class="d-flex align-items-center w-100">
-                                        <h5>Experience</h5>
-                                        <div class="ms-auto">
-                                            <span><i class="fas fa-chevron-down"></i></span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div id="collapse5" class="accordion-collapse show" aria-labelledby="heading5">
-                                <div class="accordion-body pt-3">
-                                    <div class="d-flex align-items-center justify-content-between mb-2">
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" value="" id="checkebox-sm21" checked="">
-                                            <label class="form-check-label" for="checkebox-sm21">
-                                                2+ Years
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="d-flex align-items-center justify-content-between mb-2">
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" value="" id="checkebox-sm22">
-                                            <label class="form-check-label" for="checkebox-sm22">
-                                                5+ Years
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="view-content">
-                                        <div class="viewall-3">
-                                            <div class="d-flex align-items-center justify-content-between mb-2">
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" value="" id="checkebox-sm23">
-                                                    <label class="form-check-label" for="checkebox-sm23">
-                                                        7+ Years
-                                                    </label>
-                                                </div>
-                                            </div>
-                                            <div class="d-flex align-items-center justify-content-between mb-2">
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" value="" id="checkebox-sm24">
-                                                    <label class="form-check-label" for="checkebox-sm24">
-                                                        10+ Years
-                                                    </label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="view-all">
-                                            <a href="javascript:void(0);" class="viewall-button-3 text-secondary text-decoration-underline">View More</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item border-bottom">
-                            <div class="accordion-header" id="heading6">
-                                <div class="accordion-button" data-bs-toggle="collapse" data-bs-target="#collapse6" aria-controls="collapse6" role="button">
-                                    <div class="d-flex align-items-center w-100">
-                                        <h5>Clinics</h5>
-                                        <div class="ms-auto">
-                                            <span><i class="fas fa-chevron-down"></i></span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div id="collapse6" class="accordion-collapse show" aria-labelledby="heading6">
-                                <div class="accordion-body pt-3">
-                                    <div class="d-flex align-items-center justify-content-between mb-2">
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" value="" id="checkebox-sm25" checked="">
-                                            <label class="form-check-label" for="checkebox-sm25">
-                                                Bright Smiles Dental Clinic
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="d-flex align-items-center justify-content-between mb-2">
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" value="" id="checkebox-sm26">
-                                            <label class="form-check-label" for="checkebox-sm26">
-                                                Family Care Clinic
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="d-flex align-items-center justify-content-between mb-2">
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" value="" id="checkebox-sm27">
-                                            <label class="form-check-label" for="checkebox-sm27">
-                                                Express Health Clinic
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="view-content">
-                                        <div class="viewall-4">
-                                            <div class="d-flex align-items-center justify-content-between mb-2">
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" value="" id="checkebox-sm28">
-                                                    <label class="form-check-label" for="checkebox-sm28">
-                                                        Restore Physical Therapy
-                                                    </label>
-                                                </div>
-                                            </div>
-                                            <div class="d-flex align-items-center justify-content-between mb-2">
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" value="" id="checkebox-sm29">
-                                                    <label class="form-check-label" for="checkebox-sm29">
-                                                        Blossom Women’s Health Clinic
-                                                    </label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="view-all">
-                                            <a href="javascript:void(0);" class="viewall-button-4 text-secondary text-decoration-underline">View More</a>
-                                        </div>
+                                        <span class="filter-badge">.</span>
                                     </div>
                                 </div>
                             </div>
@@ -402,7 +96,7 @@
                             <div class="accordion-header" id="heading7">
                                 <div class="accordion-button" data-bs-toggle="collapse" data-bs-target="#collapse7" aria-controls="collapse7" role="button">
                                     <div class="d-flex align-items-center w-100">
-                                        <h5>Consultation type</h5>
+                                        <h5>Tipo de consulta</h5>
                                         <div class="ms-auto">
                                             <span><i class="fas fa-chevron-down"></i></span>
                                         </div>
@@ -450,7 +144,7 @@
                             <div class="accordion-header" id="heading8">
                                 <div class="accordion-button" data-bs-toggle="collapse" data-bs-target="#collapse8" aria-controls="collapse8" role="button">
                                     <div class="d-flex align-items-center w-100">
-                                        <h5>Languages</h5>
+                                        <h5>Idioma</h5>
                                         <div class="ms-auto">
                                             <span><i class="fas fa-chevron-down"></i></span>
                                         </div>
@@ -488,87 +182,6 @@
                                             <input class="form-check-input" type="checkbox" value="" id="checkebox-sm37">
                                             <label class="form-check-label" for="checkebox-sm37">
                                                 German
-                                            </label>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item">
-                            <div class="accordion-header" id="heading9">
-                                <div class="accordion-button" data-bs-toggle="collapse" data-bs-target="#collapse9" aria-controls="collapse9" role="button">
-                                    <div class="d-flex align-items-center w-100">
-                                        <h5>Languages</h5>
-                                        <div class="ms-auto">
-                                            <span><i class="fas fa-chevron-down"></i></span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div id="collapse9" class="accordion-collapse show" aria-labelledby="heading9">
-                                <div class="accordion-body pt-3">
-                                    <div class="d-flex align-items-center justify-content-between mb-2">
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" value="" id="checkebox-sm38" checked="">
-                                            <label class="form-check-label" for="checkebox-sm38">
-                                                <span>
-                                                    <i class="fa-solid fa-star text-orange me-1"></i>
-                                                    <i class="fa-solid fa-star text-orange me-1"></i>
-                                                    <i class="fa-solid fa-star text-orange me-1"></i>
-                                                    <i class="fa-solid fa-star text-orange me-1"></i>
-                                                    <i class="fa-solid fa-star text-orange me-1"></i>
-                                                </span>
-                                                5 Star
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="d-flex align-items-center justify-content-between mb-2">
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" value="" id="checkebox-sm39">
-                                            <label class="form-check-label" for="checkebox-sm39">
-                                                <span>
-                                                    <i class="fa-solid fa-star text-orange me-1"></i>
-                                                    <i class="fa-solid fa-star text-orange me-1"></i>
-                                                    <i class="fa-solid fa-star text-orange me-1"></i>
-                                                    <i class="fa-solid fa-star text-orange me-1"></i>
-                                                </span>
-                                                4 Star
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="d-flex align-items-center justify-content-between mb-2">
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" value="" id="checkebox-sm40">
-                                            <label class="form-check-label" for="checkebox-sm40">
-                                                <span>
-                                                    <i class="fa-solid fa-star text-orange me-1"></i>
-                                                    <i class="fa-solid fa-star text-orange me-1"></i>
-                                                    <i class="fa-solid fa-star text-orange me-1"></i>
-                                                </span>
-                                                3 Star
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="d-flex align-items-center justify-content-between mb-2">
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" value="" id="checkebox-sm41">
-                                            <label class="form-check-label" for="checkebox-sm41">
-                                                <span>
-                                                    <i class="fa-solid fa-star text-orange me-1"></i>
-                                                    <i class="fa-solid fa-star text-orange me-1"></i>
-                                                </span>
-                                                2 Star
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="d-flex align-items-center justify-content-between">
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" value="" id="checkebox-sm42">
-                                            <label class="form-check-label" for="checkebox-sm42">
-                                                <span>
-                                                    <i class="fa-solid fa-star text-orange me-1"></i>
-                                                </span>
-                                                1 Star
                                             </label>
                                         </div>
                                     </div>
@@ -618,7 +231,7 @@
                             </div>
                             <div class="card-body p-0">
                                 <div class="d-flex active-bar align-items-center justify-content-between p-3">
-                                    <a href="#" class="text-indigo fw-medium fs-14">Psychologist</a>
+                                    <a href="#" class="text-indigo fw-medium fs-14">Especialidad</a>
                                     <span class="badge bg-success-light d-inline-flex align-items-center">
                                         <i class="fa-solid fa-circle fs-5 me-1"></i>
                                         Available
