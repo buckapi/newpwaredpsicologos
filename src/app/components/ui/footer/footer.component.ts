@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-
+import { GlobalService } from '../../../services/global.service';
 @Component({
   selector: 'app-footer',
   imports: [],
@@ -7,5 +7,6 @@ import { Component } from '@angular/core';
   styleUrl: './footer.component.css'
 })
 export class FooterComponent {
-
+constructor(
+  public global: GlobalService) {}
 }
