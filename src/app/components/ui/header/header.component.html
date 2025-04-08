@@ -43,14 +43,14 @@
               <span></span>
             </span>
           </a>
-          <a href="index.html" class="navbar-brand logo">
+          <a (click)="global.setRoute('home')" class="navbar-brand logo">
             <img src="assets/img/logo-3.png" class="img-fluid" alt="Logo">
           </a>
         </div>
         <div class="header-menu">
           <div class="main-menu-wrapper">
             <div class="menu-header">
-              <a href="index.html" class="menu-logo">
+              <a (click)="global.setRoute('home')" class="menu-logo">
                 <img src="assets/img/logo-3.png" class="img-fluid" alt="Logo">
               </a>
               <a id="menu_close" class="menu-close" href="javascript:void(0);">
@@ -58,19 +58,19 @@
               </a>
             </div>
             <ul class="main-nav">
-              <li class="has-submenu megamenu active">
+              <li class="has-submenu megamenu active" *ngIf="!auth.isLogin()">
                 <a (click)="global.setRoute('home')">Inicio </a>
               </li>
-              <li class="has-submenu">
-                <a (click)="global.setRoute('professionals')">Especialistas <i class="fas fa-user-md"></i></a>
+              <li class="has-submenu" *ngIf="!auth.isLogin()">
+                <a (click)="global.setRoute('professionals')" >Especialistas <i class="fas fa-user-md"></i></a>
               </li>
-              <li class="has-submenu megamenu active">
+              <li class="has-submenu megamenu active" *ngIf="!auth.isLogin()">
                 <a (click)="global.setRoute('contact')">Contacto </a>
               </li>
             </ul>
           </div>
           <ul class="nav header-navbar-rht">
-            <li class="searchbar">
+            <li class="searchbar" *ngIf="!auth.isLogin()">
               <a href="javascript:void(0);"><i class="feather-search"></i></a>
               <div class="togglesearch">
                 <form >
@@ -81,14 +81,18 @@
                 </form>
               </div>
             </li>
-            <li>
-              <a (click)="global.setRoute('login')" class="btn btn-md btn-primary-gradient d-inline-flex align-items-center rounded-pill"><i class="isax isax-lock-1 me-1"></i>Ingresa</a>
+            <li *ngIf="!auth.isLogin()">
+              <a (click)="global.setRoute('login')"  [hidden]="global.activeRoute === 'login'" class="btn btn-md btn-primary-gradient d-inline-flex align-items-center rounded-pill"><i class="isax isax-lock-1 me-1"></i>Ingresa</a>
             </li>
-            <li>
-              <a (click)="global.setRoute('register')" class="btn btn-md btn-dark d-inline-flex align-items-center rounded-pill">
+            <li *ngIf="!auth.isLogin()">
+              <a (click)="global.setRoute('register')" [hidden]="global.activeRoute === 'register'" class="btn btn-md btn-dark d-inline-flex align-items-center rounded-pill">
                 <i class="isax isax-user-tick me-1"></i>Registrate
               </a>
             </li>
+            <li *ngIf="auth.isLogin()">
+              <a (click)="logoutUser()" class="btn btn-md btn-primary-gradient d-inline-flex align-items-center rounded-pill"><i class="isax isax-lock-1 me-1"></i>Cerrar sesión</a>
+            </li>
+           
           </ul>
         </div>
       </nav>
