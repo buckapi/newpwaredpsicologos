@@ -1593,7 +1593,7 @@ p:last-child  {
 }
 
 .bg-orange {
-  background-color: #E04F16 !important;
+  background-color: #06AED4 !important;
 }
 
 /******* COMPONENTS ******/
@@ -3141,7 +3141,7 @@ h6,
 }
 
 .text-orange {
-  color: #E04F16 !important;
+  color: #06AED4 !important;
 }
 
 .text-cyan {
@@ -20402,7 +20402,7 @@ header.inner-header .header-nav .header-navbar-rht li.noti-nav > a i {
   color: #110EFD;
 }
 .health-records.icon-dark-blue h3 sup {
-  color: #E04F16;
+  color: #06AED4;
 }
 .health-records.icon-blue span i {
   color: #3538CD;
@@ -43471,7 +43471,7 @@ span.refund {
   margin-right: 12px;
 }
 .shopping-cart-amount .shopping-cart-icon span {
-  background-color: #E04F16;
+  background-color: #06AED4;
   border-radius: 50px;
   color: #FFF;
   font-size: 10px;
@@ -43993,11 +43993,11 @@ span.refund {
   background: #FCEFEA;
 }
 .suppliment-card h5 span {
-  color: #E04F16;
+  color: #06AED4;
 }
 .suppliment-card .shop-content .btn {
-  background: #E04F16;
-  border: 1px solid #E04F16;
+  background: #06AED4;
+  border: 1px solid #06AED4;
   box-shadow: inset 0 0 0 0 #FFF;
   color: #FFF;
   border-radius: 44px;
@@ -44006,9 +44006,9 @@ span.refund {
   transition: 0.5s;
 }
 .suppliment-card .shop-content .btn:hover {
-  color: #E04F16;
+  color: #06AED4;
   background: #FFF;
-  border-color: #E04F16;
+  border-color: #06AED4;
   box-shadow: inset 0 0 0 50px #FFF;
   -webkit-transition: 0.5s;
   -ms-transition: 0.5s;
@@ -49933,7 +49933,7 @@ ul li {
 }
 .medical-emergency-booking .slider-content a {
   border-radius: 10px;
-  background: #E04F16;
+  background: #06AED4;
   font-size: 14px;
   color: #FFF;
   font-weight: 600;
@@ -50228,7 +50228,7 @@ ul li {
   }
 }
 .feature-package-card.family-pack .package-book-btn {
-  background: #E04F16;
+  background: #06AED4;
 }
 .feature-package-card.mens-health {
   background: #DFFFE3;
@@ -56713,7 +56713,7 @@ ul li {
   right: 20px;
 }
 .profile-widget.patient-favour .fav-head .fav-btn .favourite-icon.favourite {
-  color: #E04F16;
+  color: #06AED4;
 }
 .profile-widget.patient-favour .fav-head .pro-content .title {
   text-align: center;
@@ -57024,7 +57024,7 @@ ul li {
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  background: #E04F16;
+  background: #06AED4;
 }
 
 .hospital-tab.settings-tab {
@@ -57115,7 +57115,7 @@ ul li {
 }
 
 .text-orange {
-  color: #E04F16;
+  color: #06AED4;
 }
 
 .text-indigo {
@@ -57123,7 +57123,7 @@ ul li {
 }
 
 .bg-orange {
-  background: #E04F16;
+  background: #06AED4;
 }
 
 .active-bar {
