@@ -9,25 +9,37 @@
                 <div class="account-content">
                     <div class="row align-items-center justify-content-center">
                         <div class="col-md-7 col-lg-6 login-left">
-                            <img src="assets/img/login-banner.png" class="img-fluid" alt="Doccure Login">	
+                            <img src="assets/img/banner-image-1.png" class="img-fluid" alt="Doccure Login">	
                         </div>
                         <div class="col-md-12 col-lg-6 login-right">
                             <div class="login-header">
-                                <h3>Login <span>Doccure</span></h3>
+                                <h3>Iniciar sesión<span> Red psicologos</span></h3>
                             </div>
-                            <form action="index.html">
+                            <form [formGroup]="loginForm" (ngSubmit)="onLogin()">
                                 <div class="mb-3">
-                                    <label class="form-label">E-mail</label>
-                                    <input type="text" class="form-control">
+                                    <label class="form-label">Correo</label>
+                                    <input  name="email" placeholder="Ingrese su correo" type="text"
+                                    class="form-control py-11 ps-40"
+                                    id="email" formControlName="email">
+                                    <div *ngIf="email?.invalid && (email?.touched || email?.dirty)" class="text-danger">
+                                        <small *ngIf="email?.hasError('required')">El correo es obligatorio.</small>
+                                        <small *ngIf="email?.hasError('email')">Por favor, ingresa un correo válido.</small>
+                                    </div>
                                 </div>
                                 <div class="mb-3">
                                     <div class="form-group-flex">
-                                        <label class="form-label">Password</label>
-                                        <a href="forgot-password.html" class="forgot-link">Forgot password?</a>
-                                    </div>
-                                    <div class="pass-group">
-                                        <input type="password" class="form-control pass-input">
-                                        <span class="feather-eye-off toggle-password"></span>
+                                        <label class="form-label">Contraseña</label>
+                                        <input name="password" placeholder="Ingrese su contraseña" 
+                                        class="form-control py-11 ps-40" id="password"
+                                        formControlName="password" 
+                                        [type]="passwordVisible ? 'text' : 'password'">
+                                        <span class="toggle-password" (click)="togglePasswordVisibility()">
+                                            <i [class]="passwordVisible ? 'feather-eye' : 'feather-eye-off'"></i>
+                                        </span>
+                                    </div> 
+                                    <div *ngIf="password?.invalid && (password?.touched || password?.dirty)" class="text-danger">
+                                        <small *ngIf="password?.hasError('required')">La contraseña es obligatoria.</small>
+                                        <small *ngIf="password?.hasError('minlength')">La contraseña debe tener al menos 6 caracteres.</small>
                                     </div>
                                 </div>
                                 <div class="mb-3 form-check-box">
@@ -35,34 +47,16 @@
                                         <div class="form-check mb-0">
                                             <input class="form-check-input" type="checkbox" id="remember" checked>
                                             <label class="form-check-label" for="remember">
-                                                Remember Me  
+                                                Recordarme  
                                             </label>
                                         </div>												
-                                        <div class="form-check mb-0">
-                                            <input class="form-check-input" type="checkbox" id="remember1">
-                                            <label class="form-check-label" for="remember1">
-                                                Login with OTP  
-                                            </label>
-                                        </div>
                                     </div>
                                 </div>
                                 <div class="mb-3">
-                                    <button class="btn btn-primary-gradient w-100" type="submit">Sign in</button>
-                                </div>
-                                <div class="login-or">
-                                    <span class="or-line"></span>
-                                    <span class="span-or">or</span>
-                                </div>
-                                <div class="social-login-btn">
-                                    <a href="javascript:void(0);" class="btn w-100">
-                                        <img src="assets/img/icons/google-icon.svg" alt="google-icon">Sign in With Google
-                                    </a>
-                                    <a href="javascript:void(0);" class="btn w-100">
-                                        <img src="assets/img/icons/facebook-icon.svg" alt="fb-icon">Sign in With Facebook
-                                    </a>
+                                    <button class="btn btn-primary-gradient w-100" type="submit">Iniciar sesión</button>
                                 </div>
                                 <div class="account-signup">
-                                    <p>Don't have an account ? <a href="register.html">Sign up</a></p>
+                                    <p>No tienes una cuenta ? <a (click)="global.setRoute('register')">Regístrate</a></p>
                                 </div>
                             </form>
                         </div>
