@@ -17,6 +17,8 @@
     "@angular/platform-browser": "^19.2.0",
     "@angular/platform-browser-dynamic": "^19.2.0",
     "@angular/router": "^19.2.0",
+    "@types/cleave.js": "^1.4.12",
+    "cleave.js": "^1.6.0",
     "pocketbase": "^0.25.2",
     "rxjs": "~7.8.0",
     "sweetalert2": "^11.17.2",

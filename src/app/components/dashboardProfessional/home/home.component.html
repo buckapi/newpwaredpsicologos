@@ -8,24 +8,25 @@
                 <div class="profile-sidebar doctor-sidebar profile-sidebar-new">
                     <div class="widget-profile pro-widget-content">
                         <div class="profile-info-widget">
-                            <a href="doctor-profile.html" class="booking-doc-img">
-                                <img src="assets/img/doctors-dashboard/doctor-profile-img.jpg" alt="User Image">
+                            <a class="booking-doc-img">
+                                <img [src]="auth.getImage()" alt="imagen de perfil" />
                             </a>
                             <div class="profile-det-info">
-                                <h3><a href="doctor-profile.html">Dr Edalin Hendry</a></h3>
+                                <p>Bienvenido(a) a tu panel de control</p>
+                                <h3>{{global.professionalInfo.name}}</h3>
                                 <div class="patient-details">
-                                    <h5 class="mb-0">BDS, MDS - Oral & Maxillofacial Surgery</h5>
+                                    <h5 class="mb-0">{{global.professionalInfo.phone}}</h5>
                                 </div>
-                                <span class="badge doctor-role-badge"><i class="fa-solid fa-circle"></i>Dentist</span>
+                                <span class="badge doctor-role-badge"><i class="fa-solid fa-circle"></i>.</span>
                             </div>
                         </div>
                     </div>
                     <div class="doctor-available-head">
                         <div class="input-block input-block-new">
-                            <label class="form-label">Availability <span class="text-danger">*</span></label>
+                            <label class="form-label">Disponibilidad <span class="text-danger">*</span></label>
                             <select class="select form-control">
-                                <option>I am Available Now</option>
-                                <option>Not Available</option>
+                                <option>Disponible</option>
+                                <option>No disponible</option>
                             </select>
                         </div>
                     </div>
@@ -33,97 +34,29 @@
                         <nav class="dashboard-menu">
                             <ul>
                                 <li>
-                                    <a href="doctor-dashboard.html">
-                                        <i class="isax isax-category-2"></i>
-                                        <span>Dashboard</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="doctor-request.html">
-                                        <i class="isax isax-clipboard-tick"></i>
-                                        <span>Requests</span>
-                                        <small class="unread-msg">2</small>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="appointments.html">
-                                        <i class="isax isax-calendar-1"></i>
-                                        <span>Appointments</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="available-timings.html">
-                                        <i class="isax isax-calendar-tick"></i>
-                                        <span>Available Timings</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="my-patients.html">
-                                        <i class="fa-solid fa-user-injured"></i>
-                                        <span>My Patients</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="doctor-specialities.html">
-                                        <i class="isax isax-clock"></i>
-                                        <span>Specialties & Services</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="reviews.html">
-                                        <i class="isax isax-star-1"></i>
-                                        <span>Reviews</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="accounts.html">
+                                    <a >
                                         <i class="isax isax-profile-tick"></i>
-                                        <span>Accounts</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="invoices.html">
-                                        <i class="isax isax-document-text"></i>
-                                        <span>Invoices</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="doctor-payment.html">
-                                        <i class="fa-solid fa-money-bill-1"></i>
-                                        <span>Payout Settings</span>
-                                    </a>
-                                </li>																																				
-                                <li>
-                                    <a href="chat-doctor.html">
-                                        <i class="isax isax-messages-1"></i>
-                                        <span>Message</span>
-                                        <small class="unread-msg">7</small>
+                                        <span>Cuenta</span>
                                     </a>
                                 </li>
                                 <li class="active">
-                                    <a href="doctor-profile-settings.html">
+                                    <a >
                                         <i class="isax isax-setting-2"></i>
-                                        <span>Profile Settings</span>
+                                        <span>Configuración del perfil</span>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="social-media.html">
-                                        <i class="fa-solid fa-shield-halved"></i>
-                                        <span>Social Media</span>
+                                    <a >
+                                        <i class="isax isax-star-1"></i>
+                                        <span>Reseñas</span>
                                     </a>
                                 </li>
-                                <li>
-                                    <a href="doctor-change-password.html">
-                                        <i class="isax isax-key"></i>
-                                        <span>Change Password</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="login.html">
+                                <!-- <li>
+                                    <a (click)="auth.logout()">
                                         <i class="isax isax-logout"></i>
-                                        <span>Logout</span>
+                                        <span>Cerrar sesión</span>
                                     </a>
-                                </li>
+                                </li> -->
                             </ul>
                         </nav>
                     </div>
@@ -135,7 +68,7 @@
             
                 <!-- Profile Settings -->
                 <div class="dashboard-header">
-                    <h3>Profile Settings</h3>
+                    <h3>Ajustes del perfil</h3>
                 </div>
 
                 <!-- Settings List -->
@@ -143,25 +76,16 @@
                     <div class="appointment-tabs">
                         <ul class="nav">
                             <li class="nav-item">
-                                <a class="nav-link active" href="doctor-profile-settings.html">Basic Details</a>
+                                <a class="nav-link active" href="#personal">Datos personales</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="doctor-experience-settings.html">Experience</a>
+                                <a class="nav-link" href="#professional">Datos profesionales</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="doctor-education-settings.html">Education</a>
+                                <a class="nav-link" href="#academic">Formación academica</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="doctor-awards-settings.html">Awards</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="doctor-insurance-settings.html">Insurances</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="doctor-clinics-settings.html">Clinics</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="doctor-business-settings.html">Business Hours</a>
+                                <a class="nav-link" href="#attent">Tipo de atención</a>
                             </li>
                         </ul>
                     </div>
@@ -169,17 +93,17 @@
                 <!-- /Settings List -->
 
                 <div class="setting-title">
-                    <h5>Profile</h5>
+                    <h5>Perfil</h5>
                 </div>
 
-                <form action="doctor-profile-settings.html">
+                <form id="personal">
                     <div class="setting-card">
                         <div class="change-avatar img-upload">
                             <div class="profile-img">
                                 <i class="fa-solid fa-file-image"></i>
                             </div>
                             <div class="upload-img">
-                                <h5>Profile Image</h5>
+                                <h5>Imagen de perfil</h5>
                                 <div class="imgs-load d-flex align-items-center">
                                     <div class="change-photo">
                                         Upload New 
@@ -188,95 +112,80 @@
                                     <a href="#" class="upload-remove">Remove</a>
                                 </div>
                                 <p class="form-text">Your Image should Below 4 MB, Accepted format jpg,png,svg</p>
-                            </div>			
+                            </div>	
+                            <div class="profile-title">
+                                <figure class="image-box">
+                                    <img [src]="auth.getImage()" alt="Profile Image" />
+                                </figure>
+                                <div class="upload-photo">
+                                    <input type="file" (change)="onFileSelected($event)" accept="image/*" #fileInput
+                                        hidden />
+                                    <a (click)="openFileSelector()" style="cursor: pointer;"><i
+                                            class="icon-Upload"></i>Cargar imagen</a>
+                                    <span>Formato JPG, GIF o PNG. Max 2MB</span>
+                                </div>
+                            </div>		
                         </div>			
                     </div>
                     <div class="setting-title">
-                        <h5>Information</h5>
+                        <h5>Información personal</h5>
                     </div>
                     <div class="setting-card">
                         <div class="row">
                             <div class="col-lg-4 col-md-6">
                                 <div class="form-wrap">
-                                    <label class="form-label">First Name <span class="text-danger">*</span></label>
+                                    <label class="form-label">Nombre y Apellido <span class="text-danger">*</span></label>
                                     <input type="text" class="form-control">
                                 </div>
                             </div>
                             <div class="col-lg-4 col-md-6">
                                 <div class="form-wrap">
-                                    <label class="form-label">Last Name <span class="text-danger">*</span></label>
+                                    <label class="form-label">Nombre de usuario <span class="text-danger">*</span></label>
                                     <input type="text" class="form-control">
                                 </div>
                             </div>
                             <div class="col-lg-4 col-md-6">
                                 <div class="form-wrap">
-                                    <label class="form-label">Display Name <span class="text-danger">*</span></label>
+                                    <label class="form-label">Rut <span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+                           
+                            <div class="col-lg-4 col-md-6">
+                                <div class="form-wrap">
+                                    <label class="form-label">Sitio web <span class="text-danger">*</span></label>
                                     <input type="text" class="form-control">
                                 </div>
                             </div>
                             <div class="col-lg-4 col-md-6">
                                 <div class="form-wrap">
-                                    <label class="form-label">Designation <span class="text-danger">*</span></label>
+                                    <label class="form-label">Teléfono / Whatsapp <span class="text-danger">*</span></label>
                                     <input type="text" class="form-control">
                                 </div>
                             </div>
                             <div class="col-lg-4 col-md-6">
                                 <div class="form-wrap">
-                                    <label class="form-label">Phone Numbers <span class="text-danger">*</span></label>
+                                    <label class="form-label">Correo <span class="text-danger">*</span></label>
                                     <input type="text" class="form-control">
                                 </div>
                             </div>
                             <div class="col-lg-4 col-md-6">
                                 <div class="form-wrap">
-                                    <label class="form-label">Email Address <span class="text-danger">*</span></label>
+                                    <label class="form-label">Género <span class="text-danger">*</span></label>
                                     <input type="text" class="form-control">
                                 </div>
                             </div>
-                            <div class="col-lg-12">
+                            <div class="col-lg-4 col-md-6">
                                 <div class="form-wrap">
-                                    <label class="form-label">Known Languages <span class="text-danger">*</span></label>
-                                    <div class="input-block input-block-new mb-0">
-                                        <input class="input-tags form-control" id="inputBox3" type="text" data-role="tagsinput" placeholder="Type New"  name="Label" value="English German,Portugese" >
-                                        <a href="#" class="input-text save-btn">Save</a>
-                                    </div>
+                                    <label class="form-label">Fecha de nacimiento <span class="text-danger">*</span></label>
+                                    <input type="date" class="form-control">
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="setting-title">
-                        <h5>Memberships</h5>
-                    </div>
-                    <div class="setting-card">
-                        <div class="add-info membership-infos">
-                            <div class="row membership-content">
-                                <div class="col-lg-3 col-md-6">
-                                    <div class="form-wrap">
-                                        <label class="form-label">Title <span class="text-danger">*</span></label>
-                                        <input type="text" class="form-control" placeholder="Add Title">
-                                    </div>
-                                </div>
-                                <div class="col-lg-9 col-md-6">
-                                    <div class="d-flex align-items-center">
-                                        <div class="form-wrap w-100">
-                                            <label class="form-label">About Membership</label>
-                                            <input type="text" class="form-control">
-                                        </div>										
-                                        <div class="form-wrap ms-2">
-                                            <label class="col-form-label d-block">&nbsp;</label>
-                                            <a href="javascript:void(0);" class="trash-icon trash">Delete</a>
-                                        </div>												
-                                    </div>			
-                                </div>
-                            </div>
-                        </div>
-                        <div class="text-end">
-                            <a href="#" class="add-membership-info more-item">Add New</a>
-                        </div>
-                    </div>
-                
                     <div class="modal-btn text-end">
-                        <a href="#" class="btn btn-gray">Cancel</a>
-                        <button type="submit" class="btn btn-primary prime-btn">Save Changes</button>
+                        <a href="#" class="btn btn-gray">Cancelar</a>
+                        <button type="submit" class="btn btn-primary prime-btn">Guardar</button>
                     </div>
 
                 </form>

@@ -209,7 +209,6 @@ export class AuthPocketbaseService {
     this.global.loading = false;
     this.pb.authStore.clear();
     this.global.setRoute('home');
-    // this.virtualRouter.routerActive = "home";
     return new Observable<any>((observer) => {
       observer.next(''); // Indicar que la operación de cierre de sesión ha completado
       observer.complete();
@@ -291,8 +290,7 @@ export class AuthPocketbaseService {
 
     // Handle admin user
     if (userType === 'admin') {
-      this.global.setMenuOption('dashboard');
-      this.global.setRoute('dashboard');
+      this.global.setRoute('dashboard-admin/home');
       return;
     }
 
