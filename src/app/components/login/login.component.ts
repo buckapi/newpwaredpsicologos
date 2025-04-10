@@ -44,7 +44,6 @@ export class LoginComponent {
           console.log('Inicio de sesión exitoso', response);
           localStorage.setItem('isLoggedin', 'true');
           this.auth.setUser(response.user);
-          this.global.setRoute('dashboard-professional/home');
           this.auth.permision();
         },
         error: (error) => {

@@ -15,6 +15,7 @@ import { RealtimeCorrientesService } from '../../../services/realtime-corrientes
 import { RealtimeRegionesService } from '../../../services/realtime-regiones.service';
 import { RealtimeComunasService } from '../../../services/realtime-comunas.service';
 import { RealtimeProfesionalesService } from '../../../services/realtime-profesionales.service';
+import { NgMultiSelectDropDownModule } from 'ng-multiselect-dropdown';
 
 
 interface Comunas {
@@ -35,9 +36,10 @@ type Corrientes = string[];
 @Component({
   selector: 'app-dashboard-home',
   standalone: true,
-  imports: [CommonModule, ReactiveFormsModule, FormsModule],
+  imports: [CommonModule, ReactiveFormsModule, FormsModule, NgMultiSelectDropDownModule],
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  styleUrls: ['./home.component.css'],
+
 })
 export class HomeComponent {
   rutError: boolean = false;

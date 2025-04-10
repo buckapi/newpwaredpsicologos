@@ -10,6 +10,7 @@ import { ContactComponent } from './components/contact/contact.component';
 import { GlobalService } from './services/global.service';
 import { DetailProfessionalComponent } from './components/detail-professional/detail-professional.component';
 import { HomeComponent as DashboardHomeComponent } from './components/dashboardProfessional/home/home.component';
+import { AuthPocketbaseService } from './services/auth-pocketbase.service';
 @Component({
   selector: 'app-root',
   imports: [
@@ -30,8 +31,15 @@ import { HomeComponent as DashboardHomeComponent } from './components/dashboardP
 export class AppComponent {
   title = 'redpsicologos';
   constructor(
-    public global: GlobalService
+    public global: GlobalService,
+    public auth: AuthPocketbaseService
   ) {
     
+  }
+  ngOnInit() {
+    // Verificar autenticación al iniciar la aplicación
+    if (localStorage.getItem('isLoggedin')) {
+      this.auth.permision();
+    }
   }
 }

@@ -96,13 +96,13 @@
                     <h5>Perfil</h5>
                 </div>
 
-                <form id="personal">
+                <form id="personal" [formGroup]="profileForm" (ngSubmit)="sendToUpdate()">
                     <div class="setting-card">
                         <div class="change-avatar img-upload">
                             <div class="profile-img">
                                 <i class="fa-solid fa-file-image"></i>
                             </div>
-                            <div class="upload-img">
+                           <!--  <div class="upload-img">
                                 <h5>Imagen de perfil</h5>
                                 <div class="imgs-load d-flex align-items-center">
                                     <div class="change-photo">
@@ -112,7 +112,7 @@
                                     <a href="#" class="upload-remove">Remove</a>
                                 </div>
                                 <p class="form-text">Your Image should Below 4 MB, Accepted format jpg,png,svg</p>
-                            </div>	
+                            </div> -->	
                             <div class="profile-title">
                                 <figure class="image-box">
                                     <img [src]="auth.getImage()" alt="Profile Image" />
@@ -135,13 +135,15 @@
                             <div class="col-lg-4 col-md-6">
                                 <div class="form-wrap">
                                     <label class="form-label">Nombre y Apellido <span class="text-danger">*</span></label>
-                                    <input type="text" class="form-control">
+                                    <input type="text" formControlName="name" placeholder="Nombres*"
+                                    required>
                                 </div>
                             </div>
                             <div class="col-lg-4 col-md-6">
                                 <div class="form-wrap">
                                     <label class="form-label">Nombre de usuario <span class="text-danger">*</span></label>
-                                    <input type="text" class="form-control">
+                                    <input type="text" formControlName="username" placeholder="Nombre de usuario*"
+                                    required>
                                 </div>
                             </div>
                             <div class="col-lg-4 col-md-6">
